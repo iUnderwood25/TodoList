@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <!-- هذا السطر هو اللي يوجهك تلقائياً -->
-  <meta http-equiv="refresh" content="0; url=https://iunderwood25.github.io/fastapi-app/" />
-  <title>جارٍ التوجيه...</title>
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #f0f0f0;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        a {
+            background: #0366d6;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background: #0256c4;
+        }
+    </style>
 </head>
 <body>
-  <p>جاري تحويلك تلقائيًا... إذا لم يتم التوجيه <a href="https://iunderwood25.github.io/fastapi-app/">اضغط هنا</a>.</p>
-</body>
-</html>
+    <div class="box">
+        <h1>Visit My GitHub</h1>
+        <p>Redirecting in <span id="timer">5</span> seconds...</p>
+        <a href="https://github.com/iUnderwood25">Go Now</a>
+    </div>
+
+    <script>
+        const username = 'iUnderwood25';
+        const url = https://github.com/${username};
+        document.querySelector('a').href = url;
+        
+        let time = 5;
+        setInterval(() => {
+            time--;
+            document.getElementById('timer').textContent = time;
+            if (time <= 0) location.href = url;
+        }, 1000);
