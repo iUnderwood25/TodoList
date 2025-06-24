@@ -29,5 +29,5 @@ def delete_task(task_number: int):
     for i, t in enumerate(tasks):
         if t.NumberOfTask == task_number:
             tasks.pop(i)
-            return {"message": "Removed"}
-    raise HTTPException(status_code=404, detail="The task not found")
+            return {"message": "تم حذف المهمة"}
+    raise HTTPException(status_code=404, detail="المهمة غير موجودة")
